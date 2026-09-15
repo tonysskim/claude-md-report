@@ -1,0 +1,10 @@
+# U.S. Treasury Borrowing Advisory Committee and Quarterly Refunding Materials
+
+- Read the `US_TREASURY_TBAC` service definition from `public_services` in the shared store's `config\providers.json`.
+- TBAC and related Quarterly Refunding materials are public and keyless. Do not request, invent, or store an API Key or access token for them. No official public TBAC data API is registered.
+- Dot-source `scripts\Invoke-RegisteredKeylessDataRequest.ps1` and call `Invoke-RegisteredKeylessDataRequest -ServiceAlias US_TREASURY_TBAC` so requests use HTTPS GET, remain on the registered Treasury host and path prefixes, follow only validated redirects, and apply conservative spacing and response-size limits.
+- Start from the registered most-recent-documents page for current work and the Quarterly Refunding archive for historical work. Discover the live official link instead of guessing date-coded filenames.
+- Keep Treasury staff presentations, TBAC member presentations, the Committee's recommended financing table, the Report to the Secretary, meeting minutes, and Treasury's final policy statement distinct. Recommendations are not executed issuance; use the final quarterly refunding statement or auction schedule when the task requires actual financing decisions.
+- Prefer HTML for reports and minutes, the one-page recommended-financing PDF for proposed auction sizes, and the smallest relevant chart or data file. Download combined presentation archives only when the task requires their full coverage.
+- Preserve the calendar quarter, fiscal quarter where stated, meeting date, release date, document type, vintage, units, source URL, retrieval date, and source-file checksum. When extracting chart values, retain page, table, or chart titles and label estimates, projections, recommendations, and realised values correctly.
+- Send requests serially, respect HTTP 429 and other service protections, and avoid bulk archive downloads. Run `scripts\Test-RegisteredKeylessDataSources.ps1 -ServiceAlias US_TREASURY_TBAC` when setup or availability is in doubt.

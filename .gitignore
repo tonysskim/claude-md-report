@@ -1,0 +1,10 @@
+.firecrawl/
+automation/daily-md-update/state.json
+private/
+**/.env
+**/.env.*
+**/encrypted/*.bin
+**/auth.json
+.claude/settings.local.json
+**/credentials.json
+**/secrets.json

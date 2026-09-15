@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #F7F7F7; -webkit-font-smoothing: antialiased; }
+  a { color: #6E1424; text-decoration: underline; text-underline-offset: 2px; }
+  a:hover { color: #540A19; }
+</style>
+</helmet>
+<div style="font-family:'IBM Plex Sans KR',system-ui,sans-serif;color:#333333;padding:48px 32px 72px;display:flex;justify-content:center">
+<div style="width:100%;max-width:1080px;display:flex;flex-direction:column;gap:56px">
+
+  <header style="display:flex;flex-direction:column;gap:20px;border-bottom:1px solid #DCDCDC;padding-bottom:32px">
+    <div style="font:500 12px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;color:#8A8A8A">COLOR SYSTEM · REPORT</div>
+    <h1 style="margin:0;font-family:'Nanum Myeongjo',serif;font-weight:800;font-size:38px;line-height:1.25;color:#540A19;text-wrap:pretty">보고서용 색상 팔레트</h1>
+    <p style="margin:0;max-width:60ch;font-size:15px;line-height:1.75;color:#5C5C5C;text-wrap:pretty">메인 색 #540A19(84 10 25)과 서브 색 #EDEDED(237 237 237)을 기준으로, 문서·표·차트에 그대로 쓸 수 있게 명도 단계와 보조색을 정리했습니다. 인쇄와 화면 모두에서 본문 대비 4.5:1 이상을 확보하는 조합만 넣었습니다.</p>
+  </header>
+
+  <section style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:baseline;gap:12px">
+      <h2 style="margin:0;font-family:'Nanum Myeongjo',serif;font-size:22px;color:#141414">1. 기준 색</h2>
+      <span style="font:400 12px 'IBM Plex Mono',monospace;color:#8A8A8A">GIVEN</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
+      <div style="background:#540A19;padding:28px;display:flex;flex-direction:column;gap:24px;min-height:170px">
+        <div style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:0.12em;color:#E3BFC4">MAIN</div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="font-family:'Nanum Myeongjo',serif;font-size:26px;color:#FFFFFF">딥 버건디</div>
+          <div style="font:400 13px/1.6 'IBM Plex Mono',monospace;color:#E3BFC4">#540A19 · rgb(84, 10, 25)<br>CMYK 40 100 75 45</div>
+        </div>
+      </div>
+      <div style="background:#EDEDED;padding:28px;display:flex;flex-direction:column;gap:24px;min-height:170px;border:1px solid #DCDCDC">
+        <div style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:0.12em;color:#8A8A8A">SUB</div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="font-family:'Nanum Myeongjo',serif;font-size:26px;color:#141414">라이트 그레이</div>
+          <div style="font:400 13px/1.6 'IBM Plex Mono',monospace;color:#5C5C5C">#EDEDED · rgb(237, 237, 237)<br>CMYK 0 0 0 7</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <h2 style="margin:0;font-family:'Nanum Myeongjo',serif;font-size:22px;color:#141414">2. 메인 색 계열</h2>
+      <p style="margin:0;font-size:14px;line-height:1.7;color:#5C5C5C">제목·표 머리행·강조에는 700~900, 배경 톤에는 050~200을 씁니다. 400 이상은 흰 글자, 300 이하는 검은 글자를 올립니다.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(116px,1fr));gap:10px">
+      <div style="background:#fff;border:1px solid #EDEDED">
+        <div style="height:76px;background:#33060F"></div>
+        <div style="padding:9px 10px;display:flex;flex-direction:column;gap:3px">
+          <div style="font-size:12px;font-weight:600;color:#333333">900</div>
+          <div style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#8A8A8A">#33060F<br>51 6 15</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #EDEDED">
+        <div style="height:76px;background:#430812"></div>
+        <div style="padding:9px 10px;display:flex;flex-direction:column;gap:3px">
+          <div style="font-size:12px;font-weight:600;color:#333333">800</div>
+          <div style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#8A8A8A">#430812<br>67 8 18</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #DCDCDC;outline:2px solid #540A19;outline-offset:-1px">
+        <div style="height:76px;background:#540A19"></div>
+        <div style="padding:9px 10px;display:flex;flex-direction:column;gap:3px">
+          <div style="font-size:12px;font-weight:600;color:#540A19">700 · 기준</div>
+          <div style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#5C5C5C">#540A19<br>84 10 25</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #EDEDED">
+        <div style="height:76px;background:#6E1424"></div>
+        <div style="padding:9px 10px;display:flex;flex-direction:column;gap:3px">
+          <div style="font-size:12px;font-weight:600;color:#333333">600</div>
+          <div style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#8A8A8A">#6E1424<br>110 20 36</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #EDEDED">
+        <div style="height:76px;background:#8A2436"></div>
+        <div style="padding:9px 10px;display:flex;flex-direction:column;gap:3px">
+          <div style="font-size:12px;font-weight:600;color:#333333">500</div>
+          <div style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#8A8A8A">#8A2436<br>138 36 54</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #EDEDED">
+        <div style="height:76px;background:#A94A58"></div>
+        <div style="padding:9px 10px;display:flex;flex-direction:column;gap:3px">
+          <div style="font-size:12px;font-weight:600;color:#333333">400</div>
+          <div style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#8A8A8A">#A94A58<br>169 74 88</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #EDEDED">
+        <div style="height:76px;background:#C98089"></div>
+        <div style="padding:9px 10px;display:flex;flex-direction:column;gap:3px">
+          <div style="font-size:12px;font-weight:600;color:#333333">300</div>
+          <div style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#8A8A8A">#C98089<br>201 128 137</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #EDEDED">
+        <div style="height:76px;background:#E3BFC4"></div>
+        <div style="padding:9px 10px;display:flex;flex-direction:column;gap:3px">
+          <div style="font-size:12px;font-weight:600;color:#333333">200</div>
+          <div style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#8A8A8A">#E3BFC4<br>227 191 196</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #EDEDED">
+        <div style="height:76px;background:#F4E4E6"></div>
+        <div style="padding:9px 10px;display:flex;flex-direction:column;gap:3px">
+          <div style="font-size:12px;font-weight:600;color:#333333">100</div>
+          <div style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#8A8A8A">#F4E4E6<br>244 228 230</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #EDEDED">
+        <div style="height:76px;background:#FBF4F5"></div>
+        <div style="padding:9px 10px;display:flex;flex-direction:column;gap:3px">
+          <div style="font-size:12px;font-weight:600;color:#333333">050</div>
+          <div style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#8A8A8A">#FBF4F5<br>251 244 245</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <h2 style="margin:0;font-family:'Nanum Myeongjo',serif;font-size:22px;color:#141414">3. 중립 회색 계열</h2>
+      <p style="margin:0;font-size:14px;line-height:1.7;color:#5C5C5C">서브 색 #EDEDED을 중간값으로 두고 위아래로 확장했습니다. 구분선 200, 보조 텍스트 500, 본문 700, 제목 900.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(116px,1fr));gap:10px">
+      <div style="background:#fff;border:1px solid #EDEDED">
+        <div style="height:76px;background:#FAFAFA;border-bottom:1px solid #EDEDED"></div>
+        <div style="padding:9px 10px;display:flex;flex-direction:column;gap:3px">
+          <div style="font-size:12px;font-weight:600;color:#333333">050 배경</div>
+          <div style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#8A8A8A">#FAFAFA<br>250 250 250</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #DCDCDC;outline:2px solid #8A8A8A;outline-offset:-1px">
+        <div style="height:76px;background:#EDEDED"></div>
+        <div style="padding:9px 10px;display:flex;flex-direction:column;gap:3px">
+          <div style="font-size:12px;font-weight:600;color:#141414">100 · 기준</div>
+          <div style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#5C5C5C">#EDEDED<br>237 237 237</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #EDEDED">
+        <div style="height:76px;background:#DCDCDC"></div>
+        <div style="padding:9px 10px;display:flex;flex-direction:column;gap:3px">
+          <div style="font-size:12px;font-weight:600;color:#333333">200 선</div>
+          <div style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#8A8A8A">#DCDCDC<br>220 220 220</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #EDEDED">
+        <div style="height:76px;background:#BDBDBD"></div>
+        <div style="padding:9px 10px;display:flex;flex-direction:column;gap:3px">
+          <div style="font-size:12px;font-weight:600;color:#333333">300</div>
+          <div style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#8A8A8A">#BDBDBD<br>189 189 189</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #EDEDED">
+        <div style="height:76px;background:#8A8A8A"></div>
+        <div style="padding:9px 10px;display:flex;flex-direction:column;gap:3px">
+          <div style="font-size:12px;font-weight:600;color:#333333">500 보조</div>
+          <div style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#8A8A8A">#8A8A8A<br>138 138 138</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #EDEDED">
+        <div style="height:76px;background:#5C5C5C"></div>
+        <div style="padding:9px 10px;display:flex;flex-direction:column;gap:3px">
+          <div style="font-size:12px;font-weight:600;color:#333333">600</div>
+          <div style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#8A8A8A">#5C5C5C<br>92 92 92</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #EDEDED">
+        <div style="height:76px;background:#333333"></div>
+        <div style="padding:9px 10px;display:flex;flex-direction:column;gap:3px">
+          <div style="font-size:12px;font-weight:600;color:#333333">700 본문</div>
+          <div style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#8A8A8A">#333333<br>51 51 51</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #EDEDED">
+        <div style="height:76px;background:#141414"></div>
+        <div style="padding:9px 10px;display:flex;flex-direction:column;gap:3px">
+          <div style="font-size:12px;font-weight:600;color:#333333">900 제목</div>
+          <div style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#8A8A8A">#141414<br>20 20 20</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <h2 style="margin:0;font-family:'Nanum Myeongjo',serif;font-size:22px;color:#141414">4. 보조색 (차트·구분용)</h2>
+      <p style="margin:0;font-size:14px;line-height:1.7;color:#5C5C5C">메인 색과 채도·명도를 맞춰 뽑은 네 가지입니다. 항목이 여러 개인 그래프는 메인 → 슬레이트 → 틸 → 오커 → 올리브 순으로 씁니다.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px">
+      <div style="border:1px solid #EDEDED;background:#fff">
+        <div style="height:92px;background:#3C5A78;display:flex;align-items:flex-end;padding:12px"><span style="font:500 12px 'IBM Plex Mono',monospace;color:#fff">SLATE</span></div>
+        <div style="padding:12px;display:flex;flex-direction:column;gap:4px">
+          <div style="font-size:13px;font-weight:600">슬레이트 블루</div>
+          <div style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#8A8A8A">#3C5A78 · 60 90 120</div>
+        </div>
+      </div>
+      <div style="border:1px solid #EDEDED;background:#fff">
+        <div style="height:92px;background:#2F6E68;display:flex;align-items:flex-end;padding:12px"><span style="font:500 12px 'IBM Plex Mono',monospace;color:#fff">TEAL</span></div>
+        <div style="padding:12px;display:flex;flex-direction:column;gap:4px">
+          <div style="font-size:13px;font-weight:600">딥 틸</div>
+          <div style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#8A8A8A">#2F6E68 · 47 110 104</div>
+        </div>
+      </div>
+      <div style="border:1px solid #EDEDED;background:#fff">
+        <div style="height:92px;background:#9C6B12;display:flex;align-items:flex-end;padding:12px"><span style="font:500 12px 'IBM Plex Mono',monospace;color:#fff">OCHRE</span></div>
+        <div style="padding:12px;display:flex;flex-direction:column;gap:4px">
+          <div style="font-size:13px;font-weight:600">오커</div>
+          <div style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#8A8A8A">#9C6B12 · 156 107 18</div>
+        </div>
+      </div>
+      <div style="border:1px solid #EDEDED;background:#fff">
+        <div style="height:92px;background:#5E6B34;display:flex;align-items:flex-end;padding:12px"><span style="font:500 12px 'IBM Plex Mono',monospace;color:#fff">OLIVE</span></div>
+        <div style="padding:12px;display:flex;flex-direction:column;gap:4px">
+          <div style="font-size:13px;font-weight:600">올리브</div>
+          <div style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#8A8A8A">#5E6B34 · 94 107 52</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:20px">
+    <h2 style="margin:0;font-family:'Nanum Myeongjo',serif;font-size:22px;color:#141414">5. 의미 색</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px">
+      <div style="border:1px solid #EDEDED;background:#fff;padding:14px;display:flex;flex-direction:column;gap:10px">
+        <div style="height:8px;background:#2E6B4F"></div>
+        <div style="font-size:13px;font-weight:600">긍정 · 증가</div>
+        <div style="font:400 11px 'IBM Plex Mono',monospace;color:#8A8A8A">#2E6B4F · 46 107 79</div>
+      </div>
+      <div style="border:1px solid #EDEDED;background:#fff;padding:14px;display:flex;flex-direction:column;gap:10px">
+        <div style="height:8px;background:#9C6B12"></div>
+        <div style="font-size:13px;font-weight:600">주의</div>
+        <div style="font:400 11px 'IBM Plex Mono',monospace;color:#8A8A8A">#9C6B12 · 156 107 18</div>
+      </div>
+      <div style="border:1px solid #EDEDED;background:#fff;padding:14px;display:flex;flex-direction:column;gap:10px">
+        <div style="height:8px;background:#8A2436"></div>
+        <div style="font-size:13px;font-weight:600">경고 · 감소</div>
+        <div style="font:400 11px 'IBM Plex Mono',monospace;color:#8A8A8A">#8A2436 · 138 36 54</div>
+      </div>
+      <div style="border:1px solid #EDEDED;background:#fff;padding:14px;display:flex;flex-direction:column;gap:10px">
+        <div style="height:8px;background:#3C5A78"></div>
+        <div style="font-size:13px;font-weight:600">정보</div>
+        <div style="font:400 11px 'IBM Plex Mono',monospace;color:#8A8A8A">#3C5A78 · 60 90 120</div>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ showExamples }}" hint-placeholder-val="{{ true }}">
+  <section style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <h2 style="margin:0;font-family:'Nanum Myeongjo',serif;font-size:22px;color:#141414">6. 적용 예시</h2>
+      <p style="margin:0;font-size:14px;line-height:1.7;color:#5C5C5C">흰 배경 60%, 회색 계열 30%, 메인 색 10% 비율을 기준으로 배치했습니다.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+      <div style="background:#fff;border:1px solid #EDEDED;border-top:3px solid #540A19;padding:20px;display:flex;flex-direction:column;gap:8px">
+        <div style="font-size:12px;color:#5C5C5C">연간 매출</div>
+        <div style="font-family:'Nanum Myeongjo',serif;font-size:30px;color:#540A19">1,284억</div>
+        <div style="font-size:12px;color:#2E6B4F">▲ 12.4% 전년 대비</div>
+      </div>
+      <div style="background:#fff;border:1px solid #EDEDED;border-top:3px solid #DCDCDC;padding:20px;display:flex;flex-direction:column;gap:8px">
+        <div style="font-size:12px;color:#5C5C5C">영업이익률</div>
+        <div style="font-family:'Nanum Myeongjo',serif;font-size:30px;color:#141414">18.2%</div>
+        <div style="font-size:12px;color:#8A2436">▼ 1.1%p 전년 대비</div>
+      </div>
+      <div style="background:#EDEDED;border:1px solid #DCDCDC;padding:20px;display:flex;flex-direction:column;gap:8px">
+        <div style="font-size:12px;color:#5C5C5C">신규 고객</div>
+        <div style="font-family:'Nanum Myeongjo',serif;font-size:30px;color:#141414">3,910</div>
+        <div style="font-size:12px;color:#5C5C5C">— 목표 대비 98%</div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;align-items:start">
+      <div style="background:#fff;border:1px solid #EDEDED;overflow:hidden">
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <thead>
+            <tr style="background:#540A19">
+              <th style="text-align:left;padding:11px 14px;color:#FFFFFF;font-weight:500">구분</th>
+              <th style="text-align:right;padding:11px 14px;color:#FFFFFF;font-weight:500">2025</th>
+              <th style="text-align:right;padding:11px 14px;color:#FFFFFF;font-weight:500">2026</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fff"><td style="padding:11px 14px;border-bottom:1px solid #EDEDED;color:#333333">국내</td><td style="padding:11px 14px;border-bottom:1px solid #EDEDED;text-align:right;color:#5C5C5C">742</td><td style="padding:11px 14px;border-bottom:1px solid #EDEDED;text-align:right;color:#141414;font-weight:500">831</td></tr>
+            <tr style="background:#FAFAFA"><td style="padding:11px 14px;border-bottom:1px solid #EDEDED;color:#333333">해외</td><td style="padding:11px 14px;border-bottom:1px solid #EDEDED;text-align:right;color:#5C5C5C">398</td><td style="padding:11px 14px;border-bottom:1px solid #EDEDED;text-align:right;color:#141414;font-weight:500">453</td></tr>
+            <tr style="background:#fff"><td style="padding:11px 14px;border-bottom:1px solid #EDEDED;color:#333333">온라인</td><td style="padding:11px 14px;border-bottom:1px solid #EDEDED;text-align:right;color:#5C5C5C">211</td><td style="padding:11px 14px;border-bottom:1px solid #EDEDED;text-align:right;color:#141414;font-weight:500">289</td></tr>
+            <tr style="background:#F4E4E6"><td style="padding:11px 14px;color:#540A19;font-weight:600">합계</td><td style="padding:11px 14px;text-align:right;color:#540A19">1,351</td><td style="padding:11px 14px;text-align:right;color:#540A19;font-weight:600">1,573</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="background:#fff;border:1px solid #EDEDED;padding:20px;display:flex;flex-direction:column;gap:18px">
+        <div style="font-size:13px;font-weight:600;color:#141414">연도별 매출</div>
+        <sc-if value="{{ chartMono }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;align-items:flex-end;gap:12px;height:150px">
+            <div style="flex:1;height:48%;background:#E3BFC4"></div>
+            <div style="flex:1;height:60%;background:#C98089"></div>
+            <div style="flex:1;height:74%;background:#A94A58"></div>
+            <div style="flex:1;height:86%;background:#8A2436"></div>
+            <div style="flex:1;height:100%;background:#540A19"></div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ chartMulti }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;align-items:flex-end;gap:12px;height:150px">
+            <div style="flex:1;height:48%;background:#540A19"></div>
+            <div style="flex:1;height:60%;background:#3C5A78"></div>
+            <div style="flex:1;height:74%;background:#2F6E68"></div>
+            <div style="flex:1;height:86%;background:#9C6B12"></div>
+            <div style="flex:1;height:100%;background:#5E6B34"></div>
+          </div>
+        </sc-if>
+        <div style="display:flex;gap:12px;border-top:1px solid #EDEDED;padding-top:10px">
+          <div style="flex:1;text-align:center;font:400 11px 'IBM Plex Mono',monospace;color:#8A8A8A">2022</div>
+          <div style="flex:1;text-align:center;font:400 11px 'IBM Plex Mono',monospace;color:#8A8A8A">2023</div>
+          <div style="flex:1;text-align:center;font:400 11px 'IBM Plex Mono',monospace;color:#8A8A8A">2024</div>
+          <div style="flex:1;text-align:center;font:400 11px 'IBM Plex Mono',monospace;color:#8A8A8A">2025</div>
+          <div style="flex:1;text-align:center;font:400 11px 'IBM Plex Mono',monospace;color:#8A8A8A">2026</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;align-items:start">
+
+      <div style="background:#fff;border:1px solid #EDEDED;padding:20px;display:flex;flex-direction:column;gap:18px">
+        <div style="font-size:13px;font-weight:600;color:#141414">국고채 금리 추이</div>
+        <sc-if value="{{ chartMono }}" hint-placeholder-val="{{ true }}">
+          <svg viewBox="0 0 320 150" style="width:100%;height:150px;display:block" preserveAspectRatio="none">
+            <line x1="0" y1="37" x2="320" y2="37" stroke="#EDEDED" stroke-width="1"></line>
+            <line x1="0" y1="75" x2="320" y2="75" stroke="#EDEDED" stroke-width="1"></line>
+            <line x1="0" y1="113" x2="320" y2="113" stroke="#EDEDED" stroke-width="1"></line>
+            <polyline points="8,118 60,104 112,88 164,96 216,62 268,44 312,30" fill="none" stroke="#540A19" stroke-width="2.5"></polyline>
+            <polyline points="8,132 60,126 112,118 164,122 216,104 268,96 312,88" fill="none" stroke="#3C5A78" stroke-width="2"></polyline>
+            <polyline points="8,100 60,94 112,80 164,86 216,70 268,58 312,50" fill="none" stroke="#2F6E68" stroke-width="2"></polyline>
+            <polyline points="8,84 60,72 112,66 164,58 216,50 268,40 312,34" fill="none" stroke="#9C6B12" stroke-width="2" stroke-dasharray="7 4"></polyline>
+            <polyline points="8,58 60,54 112,44 164,48 216,36 268,28 312,20" fill="none" stroke="#5C5C5C" stroke-width="1.5" stroke-dasharray="7 4"></polyline>
+          </svg>
+        </sc-if>
+        <sc-if value="{{ chartMulti }}" hint-placeholder-val="{{ false }}">
+          <svg viewBox="0 0 320 150" style="width:100%;height:150px;display:block" preserveAspectRatio="none">
+            <line x1="0" y1="37" x2="320" y2="37" stroke="#EDEDED" stroke-width="1"></line>
+            <line x1="0" y1="75" x2="320" y2="75" stroke="#EDEDED" stroke-width="1"></line>
+            <line x1="0" y1="113" x2="320" y2="113" stroke="#EDEDED" stroke-width="1"></line>
+            <polyline points="8,118 60,104 112,88 164,96 216,62 268,44 312,30" fill="none" stroke="#540A19" stroke-width="2.5"></polyline>
+            <polyline points="8,132 60,126 112,118 164,122 216,104 268,96 312,88" fill="none" stroke="#3C5A78" stroke-width="2"></polyline>
+            <polyline points="8,96 60,92 112,78 164,84 216,70 268,58 312,52" fill="none" stroke="#2F6E68" stroke-width="2"></polyline>
+            <polyline points="8,84 60,72 112,66 164,58 216,50 268,40 312,34" fill="none" stroke="#9C6B12" stroke-width="2"></polyline>
+            <polyline points="8,58 60,54 112,44 164,48 216,36 268,28 312,20" fill="none" stroke="#5E6B34" stroke-width="2"></polyline>
+          </svg>
+        </sc-if>
+        <div style="display:flex;gap:16px;border-top:1px solid #EDEDED;padding-top:10px;flex-wrap:wrap">
+          <div style="display:flex;align-items:center;gap:6px">
+            <div style="width:14px;height:2px;background:#540A19"></div>
+            <span style="font-size:11px;color:#5C5C5C">국고 3년</span>
+          </div>
+          <sc-if value="{{ chartMono }}" hint-placeholder-val="{{ true }}">
+            <div style="display:flex;align-items:center;gap:6px">
+              <div style="width:16px;height:2px;background:#3C5A78"></div>
+              <span style="font-size:11px;color:#5C5C5C">국고 10년</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px">
+              <div style="width:16px;height:2px;background:#2F6E68"></div>
+              <span style="font-size:11px;color:#5C5C5C">국고 30년</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px">
+              <div style="width:16px;height:2px;background:repeating-linear-gradient(90deg,#9C6B12 0 7px,transparent 7px 11px)"></div>
+              <span style="font-size:11px;color:#5C5C5C">미국 2년</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px">
+              <div style="width:16px;height:1.5px;background:repeating-linear-gradient(90deg,#5C5C5C 0 7px,transparent 7px 11px)"></div>
+              <span style="font-size:11px;color:#5C5C5C">미국 10년</span>
+            </div>
+          </sc-if>
+          <sc-if value="{{ chartMulti }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;align-items:center;gap:6px">
+              <div style="width:14px;height:2px;background:#3C5A78"></div>
+              <span style="font-size:11px;color:#5C5C5C">국고 10년</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px">
+              <div style="width:14px;height:2px;background:#2F6E68"></div>
+              <span style="font-size:11px;color:#5C5C5C">국고 30년</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px">
+              <div style="width:14px;height:2px;background:#9C6B12"></div>
+              <span style="font-size:11px;color:#5C5C5C">미국 2년</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px">
+              <div style="width:14px;height:2px;background:#5E6B34"></div>
+              <span style="font-size:11px;color:#5C5C5C">미국 10년</span>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+
+      <div style="background:#fff;border:1px solid #EDEDED;padding:20px;display:flex;flex-direction:column;gap:18px">
+        <div style="font-size:13px;font-weight:600;color:#141414">부문별 매출 비중</div>
+        <div style="display:flex;align-items:center;gap:22px;flex-wrap:wrap">
+          <sc-if value="{{ chartMono }}" hint-placeholder-val="{{ true }}">
+            <div style="width:150px;height:150px;border-radius:50%;flex:0 0 auto;background:conic-gradient(#540A19 0 44%, #8A2436 44% 67%, #A94A58 67% 82%, #C98089 82% 93%, #E3BFC4 93% 100%)"></div>
+          </sc-if>
+          <sc-if value="{{ chartMulti }}" hint-placeholder-val="{{ false }}">
+            <div style="width:150px;height:150px;border-radius:50%;flex:0 0 auto;background:conic-gradient(#540A19 0 44%, #3C5A78 44% 67%, #2F6E68 67% 82%, #9C6B12 82% 93%, #5E6B34 93% 100%)"></div>
+          </sc-if>
+          <div style="flex:1;min-width:120px;display:flex;flex-direction:column;gap:9px">
+            <sc-if value="{{ chartMono }}" hint-placeholder-val="{{ true }}">
+              <div style="display:flex;align-items:center;gap:8px">
+                <div style="width:10px;height:10px;background:#540A19;flex:0 0 auto"></div>
+                <span style="font-size:12px;color:#333333;flex:1">국내</span>
+                <span style="font:400 12px 'IBM Plex Mono',monospace;color:#141414">44%</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px">
+                <div style="width:10px;height:10px;background:#8A2436;flex:0 0 auto"></div>
+                <span style="font-size:12px;color:#333333;flex:1">해외</span>
+                <span style="font:400 12px 'IBM Plex Mono',monospace;color:#141414">23%</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px">
+                <div style="width:10px;height:10px;background:#A94A58;flex:0 0 auto"></div>
+                <span style="font-size:12px;color:#333333;flex:1">온라인</span>
+                <span style="font:400 12px 'IBM Plex Mono',monospace;color:#141414">15%</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px">
+                <div style="width:10px;height:10px;background:#C98089;flex:0 0 auto"></div>
+                <span style="font-size:12px;color:#333333;flex:1">기관</span>
+                <span style="font:400 12px 'IBM Plex Mono',monospace;color:#141414">11%</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px">
+                <div style="width:10px;height:10px;background:#E3BFC4;flex:0 0 auto"></div>
+                <span style="font-size:12px;color:#333333;flex:1">기타</span>
+                <span style="font:400 12px 'IBM Plex Mono',monospace;color:#141414">7%</span>
+              </div>
+            </sc-if>
+            <sc-if value="{{ chartMulti }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;align-items:center;gap:8px">
+                <div style="width:10px;height:10px;background:#540A19;flex:0 0 auto"></div>
+                <span style="font-size:12px;color:#333333;flex:1">국내</span>
+                <span style="font:400 12px 'IBM Plex Mono',monospace;color:#141414">44%</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px">
+                <div style="width:10px;height:10px;background:#3C5A78;flex:0 0 auto"></div>
+                <span style="font-size:12px;color:#333333;flex:1">해외</span>
+                <span style="font:400 12px 'IBM Plex Mono',monospace;color:#141414">23%</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px">
+                <div style="width:10px;height:10px;background:#2F6E68;flex:0 0 auto"></div>
+                <span style="font-size:12px;color:#333333;flex:1">온라인</span>
+                <span style="font:400 12px 'IBM Plex Mono',monospace;color:#141414">15%</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px">
+                <div style="width:10px;height:10px;background:#9C6B12;flex:0 0 auto"></div>
+                <span style="font-size:12px;color:#333333;flex:1">기관</span>
+                <span style="font:400 12px 'IBM Plex Mono',monospace;color:#141414">11%</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px">
+                <div style="width:10px;height:10px;background:#5E6B34;flex:0 0 auto"></div>
+                <span style="font-size:12px;color:#333333;flex:1">기타</span>
+                <span style="font:400 12px 'IBM Plex Mono',monospace;color:#141414">7%</span>
+              </div>
+            </sc-if>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  </sc-if>
+
+  <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+  <section style="background:#141414;padding:32px;display:flex;flex-direction:column;gap:20px">
+    <h2 style="margin:0;font-family:'Nanum Myeongjo',serif;font-size:20px;color:#FFFFFF">사용 규칙</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px">
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <div style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:0.1em;color:#C98089">TEXT</div>
+        <p style="margin:0;font-size:13px;line-height:1.75;color:#DCDCDC">본문은 #333333, 캡션은 #8A8A8A. 메인 색은 제목과 강조 숫자에만 쓰고 문장 전체에는 쓰지 않습니다.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <div style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:0.1em;color:#C98089">CONTRAST</div>
+        <p style="margin:0;font-size:13px;line-height:1.75;color:#DCDCDC">#540A19·#8A2436·#A94A58 위에는 흰 글자, #C98089 이하 밝은 톤 위에는 #141414을 올립니다.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <div style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:0.1em;color:#C98089">PRINT</div>
+        <p style="margin:0;font-size:13px;line-height:1.75;color:#DCDCDC">흑백 출력 시 메인 계열 700과 500이 붙어 보입니다. 표·차트에서는 두 단계 이상 떨어진 톤끼리 조합하세요.</p>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;showExamples&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;구성&quot;},
+  &quot;showNotes&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;구성&quot;},
+  &quot;chartPalette&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;메인 계열 단색&quot;, &quot;보조색 조합&quot;], &quot;default&quot;: &quot;메인 계열 단색&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;차트&quot;}
+}">
+class Component extends DCLogic {
+  renderVals() {
+    const mode = this.props.chartPalette ?? "메인 계열 단색";
+    return {
+      showExamples: this.props.showExamples ?? true,
+      showNotes: this.props.showNotes ?? true,
+      chartMono: mode === "메인 계열 단색",
+      chartMulti: mode !== "메인 계열 단색"
+    };
+  }
+}
+</script>
+</body>
+</html>
